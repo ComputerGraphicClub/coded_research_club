@@ -229,7 +229,7 @@ document.addEventListener('scroll', function (ev) {
 
     //// End of Fade out text /////////////
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 3; i++) {
 
         if (isInViewportX(slide[i])) {
             dot[i].classList.add('active');
