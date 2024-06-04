@@ -1246,6 +1246,14 @@ font-size: 30px;
     width: 70px;
 }
 
+.brand-name {
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
 #constrast-switch {
   margin: 22px 23px 0 0;
   transform: scale(0.9);
