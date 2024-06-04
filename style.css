@@ -632,8 +632,18 @@ h1.section-name {
     left: 0;
     z-index: 3;
     opacity: 1;
-    transition: 0.9s;
+    /* transition: 0.9s; */
 }
+
+.section-name {
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+
 
   h1.section-name-dark {
     color: white;

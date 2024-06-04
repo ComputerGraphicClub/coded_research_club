@@ -372,11 +372,23 @@ document.addEventListener('scroll', function (ev) {
     for (let i = 0; i < frames.length; i++) {
 
          if (isInViewportY(frames[2])) {
-            sectionsTitle[0].innerHTML = "TE.01b";
+            sectionsTitle[0].style.opacity = 0;
+            setTimeout(function(){ 
+                // Load new content
+                sectionsTitle[0].innerHTML = "TE.01b";
+                // Fade in
+                sectionsTitle[0].style.opacity = 1;
+            },500);
          }
 
          if (isInViewportY(frames[3])) {
-            sectionsTitle[0].innerHTML = "SI.O4b";
+            sectionsTitle[0].style.opacity = 0;
+            setTimeout(function(){ 
+                // Load new content
+                sectionsTitle[0].innerHTML = "SI.04b";
+                // Fade in
+                sectionsTitle[0].style.opacity = 1;
+            },500);
          }
 
          if (isInViewportY(frames[4])) {
