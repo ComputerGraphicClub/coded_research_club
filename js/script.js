@@ -36,39 +36,39 @@ myLoop();
 //// Cross to arrow /////////////
 /////////////////////////////////
 
-const arrow = document.getElementsByClassName("arrow");
-const cross = document.getElementsByClassName("cross");
-const twoBar = document.getElementsByClassName("twobar");
-const navBarX = document.getElementsByClassName("navigation-slides");
-const descPanel = document.getElementsByClassName("coded-description-layout");
-let buttonState = false;
+// const arrow = document.getElementsByClassName("arrow");
+// const cross = document.getElementsByClassName("cross");
+// const twoBar = document.getElementsByClassName("twobar");
+// const navBarX = document.getElementsByClassName("navigation-slides");
+// const descPanel = document.getElementsByClassName("coded-description-layout");
+// let buttonState = false;
 
 // for (let i = 0; i < twoBar.length; i++) {
 
-twoBar[0].addEventListener("click", () => {
+// twoBar[0].addEventListener("click", () => {
 
-    if (buttonState == false){ 
-        twoBar[0].classList.remove("cross");
-        twoBar[0].classList.add("arrow");
-        twoBar[0].style.margin = "38px 15px";
-        twoBar[0].style.animation = "cross-color-in 1000ms 1";
-        navBarX[0].style.opacity = "0";
-        descPanel[0].style.transform = "translateX(0px)";
-        buttonState = true;
-        console.log("false");
-    }
+//     if (buttonState == false){ 
+//         twoBar[0].classList.remove("cross");
+//         twoBar[0].classList.add("arrow");
+//         twoBar[0].style.margin = "38px 15px";
+//         twoBar[0].style.animation = "cross-color-in 1000ms 1";
+//         navBarX[0].style.opacity = "0";
+//         descPanel[0].style.transform = "translateX(0px)";
+//         buttonState = true;
+//         console.log("false");
+//     }
     
-    else {
-        twoBar[0].classList.remove("arrow");
-        twoBar[0].classList.add("cross");
-        twoBar[0].style.margin = "34px 33px";
-        twoBar[0].style.animation = "cross-color-out 1000ms 1";
-        navBarX[0].style.opacity = "1";
-        descPanel[0].style.transform = "translateX(220px)";
-        buttonState = false;
-        console.log("true");
-    }
-});
+//     else {
+//         twoBar[0].classList.remove("arrow");
+//         twoBar[0].classList.add("cross");
+//         twoBar[0].style.margin = "34px 33px";
+//         twoBar[0].style.animation = "cross-color-out 1000ms 1";
+//         navBarX[0].style.opacity = "1";
+//         descPanel[0].style.transform = "translateX(220px)";
+//         buttonState = false;
+//         console.log("true");
+//     }
+// });
 
 //  }
 
@@ -103,57 +103,57 @@ var fadeOut = document.getElementsByClassName('fade-out');
 /////////////////////////////////
 
 
-const archiveButton = document.getElementsByClassName("open-close-button");
-const archiveButtonCross = document.getElementsByClassName("cross-button");
-const archiveDescription = document.getElementsByClassName("archive-description-layout");
-const sectionTitle = document.getElementsByClassName("section-name");
+// const archiveButton = document.getElementsByClassName("open-close-button");
+// const archiveButtonCross = document.getElementsByClassName("cross-button");
+// const archiveDescription = document.getElementsByClassName("archive-description-layout");
+// const sectionTitle = document.getElementsByClassName("section-name");
 // const test = document.getElementsByClassName("test");
-let archiveButtonState = 0;
+// let archiveButtonState = 0;
 
 // test[0].onclick = () => {console.log("hello")};
 
 // let i = 0;
-for (let i = 0; i < archiveButton.length; i++) {
+// for (let i = 0; i < archiveButton.length; i++) {
 
-    archiveButton[i].onclick = function () {
-        OpenCloseDescription(i)
-    };
+//     archiveButton[i].onclick = function () {
+//         OpenCloseDescription(i)
+//     };
 
-    function OpenCloseDescription(a) {
+//     function OpenCloseDescription(a) {
 
-        if (archiveButtonState === 0) {
-            archiveButtonCross[a].style.transform = "rotate(45deg)";
-            archiveDescription[a].style.zIndex = "2";
-            archiveDescription[a].style.opacity = "1";
-            navBarX[a].style.opacity = "0";
-            // sectionTitle[i].style.opacity = "0";
-            archiveButtonState = 1;
+//         if (archiveButtonState === 0) {
+//             archiveButtonCross[a].style.transform = "rotate(45deg)";
+//             archiveDescription[a].style.zIndex = "2";
+//             archiveDescription[a].style.opacity = "1";
+//             navBarX[a].style.opacity = "0";
+//             // sectionTitle[i].style.opacity = "0";
+//             archiveButtonState = 1;
 
-            if (window.matchMedia("(min-width: 600px)").matches) {
-                sectionTitle[a].style.opacity = "0";
-            } else {
-                sectionTitle[a].style.opacity = "1";
-            }
+//             if (window.matchMedia("(min-width: 600px)").matches) {
+//                 sectionTitle[a].style.opacity = "0";
+//             } else {
+//                 sectionTitle[a].style.opacity = "1";
+//             }
 
-        } else {
-            archiveButtonCross[a].style.transform = "rotate(0deg)";
-            archiveDescription[a].style.zIndex = "0";
-            archiveDescription[a].style.opacity = "0";
-            navBarX[a].style.opacity = "1";
-            // sectionTitle[i].style.opacity = "1";
-            archiveButtonState = 0;
+//         } else {
+//             archiveButtonCross[a].style.transform = "rotate(0deg)";
+//             archiveDescription[a].style.zIndex = "0";
+//             archiveDescription[a].style.opacity = "0";
+//             navBarX[a].style.opacity = "1";
+//             // sectionTitle[i].style.opacity = "1";
+//             archiveButtonState = 0;
 
-            if (window.matchMedia("(min-width: 600px)").matches) {
-                sectionTitle[a].style.opacity = "1";
-            } else {
-                sectionTitle[a].style.opacity = "1";
-            }
+//             if (window.matchMedia("(min-width: 600px)").matches) {
+//                 sectionTitle[a].style.opacity = "1";
+//             } else {
+//                 sectionTitle[a].style.opacity = "1";
+//             }
 
-        }
+//         }
 
-    }
+//     }
 
-}
+// }
 
 
 
