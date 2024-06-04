@@ -379,34 +379,26 @@ document.addEventListener('scroll', function (ev) {
             sectionsTitle[0].innerHTML = "Coded <span><span class='letter-spacing-logo-research'>research</span> <span class='letter-spacing-logo-club'><div id='club_align'>club</div></span></span>";
        }
 
-         if (isInViewportY(frames[2])) {
-            sectionsTitle[0].style.opacity = 0;
-            setTimeout(function(){ 
-                // Load new content
-                sectionsTitle[0].innerHTML = "TE.01b";
-                // Fade in
-                sectionsTitle[0].style.opacity = 1;
-            },300);
-         }
+       if (isInViewportY(frames[2])) {
+        sectionsTitle[0].innerHTML = "TE.01b";  
+     }
+
+        //  if (isInViewportY(frames[2])) {
+        //     sectionsTitle[0].style.opacity = 0;
+        //     setTimeout(function(){ 
+        //         // Load new content
+        //         sectionsTitle[0].innerHTML = "TE.01b";
+        //         // Fade in
+        //         sectionsTitle[0].style.opacity = 1;
+        //     },600);
+        //  }
 
          if (isInViewportY(frames[3])) {
-            sectionsTitle[0].style.opacity = 0;
-            setTimeout(function(){ 
-                // Load new content
                 sectionsTitle[0].innerHTML = "SI.04b";
-                // Fade in
-                sectionsTitle[0].style.opacity = 1;
-            },300);
          }
 
          if (isInViewportY(frames[4])) {
-            sectionsTitle[0].style.opacity = 0;
-            setTimeout(function(){ 
-                // Load new content
                 sectionsTitle[0].innerHTML = "TP.01x";
-                // Fade in
-                sectionsTitle[0].style.opacity = 1;
-            },300);
          }
 
          if (isInViewportY(frames[5])) {
