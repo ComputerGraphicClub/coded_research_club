@@ -372,17 +372,31 @@ document.addEventListener('scroll', function (ev) {
     for (let i = 0; i < frames.length; i++) {
 
          if (isInViewportY(frames[2])) {
-            sectionsTitle[0].innerHTML = "Title 1";
+            sectionsTitle[0].innerHTML = "Terrha";
          }
 
          if (isInViewportY(frames[3])) {
-            sectionsTitle[0].innerHTML = "Title 2";
-
+            sectionsTitle[0].innerHTML = "Simorgh";
          }
 
          if (isInViewportY(frames[4])) {
-            sectionsTitle[0].innerHTML = "Title 3";
+            sectionsTitle[0].innerHTML = "Together Pad";
+         }
 
+         if (isInViewportY(frames[5])) {
+            sectionsTitle[0].innerHTML = "Hex.ao";
+         }
+
+         if (isInViewportY(frames[6])) {
+            sectionsTitle[0].innerHTML = "DNA";
+         }
+
+         if (isInViewportY(frames[7])) {
+            sectionsTitle[0].innerHTML = "Chaos Studio";
+         }
+
+         if (isInViewportY(frames[8])) {
+            sectionsTitle[0].innerHTML = "AM.01";
          }
 
         }
