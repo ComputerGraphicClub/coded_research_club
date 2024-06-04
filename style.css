@@ -421,15 +421,16 @@ h1.go-to-top {
 
 
 .project-client {
-color : white;
-position: absolute;
-right: 0;
-top: 0;
-font-size: 20.2px;
-padding: 25px 37.5px;
-font-family: 'SansSerif_book';
-line-height: 20.2px;
-text-align: left;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20.2px;
+  padding: 26px 37.5px;
+  font-family: 'SansSerif_book';
+  line-height: 20.2px;
+  text-align: right;
+  z-index: 99;
 }
 
 .project-client span {
