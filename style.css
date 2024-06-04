@@ -228,6 +228,14 @@ h1.go-to-top {
   z-index: 2;
 }
 
+.brand-name {
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
 .intro_2 {
  z-index: -1;
 }
@@ -1246,13 +1254,7 @@ font-size: 30px;
     width: 70px;
 }
 
-.brand-name {
-  -webkit-transition: opacity .3s ease-in-out;
-  -moz-transition: opacity .3s ease-in-out;
-  -ms-transition: opacity .3s ease-in-out;
-  -o-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out;
-}
+
 
 #constrast-switch {
   margin: 22px 23px 0 0;
