@@ -360,7 +360,7 @@ let oldGradDotYPosition = 0;
 
 // Après chaque action de scroll, adapter la position du "repère rouge" à la section active
 const mainScrollY = document.querySelectorAll('.archiveYscroll');
-const sectionsTitle = document.querySelectorAll('.section-name');
+const sectionsTitle = document.querySelectorAll('.brand-name');
 mainScrollY[0].tabIndex = 0;
 mainScrollY[0].focus();
 const projectScrollY = document.querySelectorAll('.smartphone-layer-container');
@@ -371,8 +371,22 @@ document.addEventListener('scroll', function (ev) {
 
     for (let i = 0; i < frames.length; i++) {
 
+        if (isInViewportY(frames[0])) {
+            sectionsTitle[0].innerHTML = "Coded <span><span class='letter-spacing-logo-research'>research</span> <span class='letter-spacing-logo-club'><div id='club_align'>club</div></span></span>";
+        }
+
+        if (isInViewportY(frames[1])) {
+            sectionsTitle[0].innerHTML = "Coded <span><span class='letter-spacing-logo-research'>research</span> <span class='letter-spacing-logo-club'><div id='club_align'>club</div></span></span>";
+       }
+
          if (isInViewportY(frames[2])) {
+            sectionsTitle[0].style.opacity = 0;
+            setTimeout(function(){ 
+                // Load new content
                 sectionsTitle[0].innerHTML = "TE.01b";
+                // Fade in
+                sectionsTitle[0].style.opacity = 1;
+            },300);
          }
 
          if (isInViewportY(frames[3])) {
