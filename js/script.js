@@ -583,21 +583,34 @@ for(const htmlElement of allImageWithLazyLoading) {
 function OnScrollMobile(div) {
     const slideRight = document.getElementById('smartphone-scroll');
     const scrollLeft = document.getElementById("desktop-scroll");
-    const scrollDescription = document.getElementById("description-scroll");
+    const scrollDescription = document.getElementById("info-scroll");
 
     if (isInViewportX(slideRight)) {
         scrollLeft.scrollTop = div.scrollTop;
-        // scrollDescription.scrollTop = div.scrollTop;
+        scrollDescription.scrollTop = div.scrollTop;
     } else {} 
 }
 
 function OnScrollDesktop(div) {
     const slideLeft = document.getElementById('desktop-scroll');
     const scrollRight = document.getElementById("smartphone-scroll");
-    const scrollDescription = document.getElementById("description-scroll");
+    const scrollDescription = document.getElementById("info-scroll");
 
     if (isInViewportX(slideLeft)) {
         scrollRight.scrollTop = div.scrollTop;
+        scrollDescription.scrollTop = div.scrollTop;
+      
+    } else {} 
+}
+
+function OnScrollInfo(div) {
+    const scrollLeft = document.getElementById('desktop-scroll');
+    const scrollRight = document.getElementById("smartphone-scroll");
+    const slideDescription = document.getElementById("info-scroll");
+
+    if (isInViewportX(slideDescription)) {
+        scrollRight.scrollTop = div.scrollTop;
+        scrollLeft.scrollTop = div.scrollTop;
       
     } else {} 
 }
