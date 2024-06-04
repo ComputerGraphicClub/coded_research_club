@@ -422,9 +422,11 @@ h1.go-to-top {
 
 .project-client {
 color : white;
+position: absolute;
+right: 0;
+top: 0;
 font-size: 20.2px;
-padding-left: 25px;
-padding-top: 37.5px;
+padding: 25px 37.5px;
 font-family: 'SansSerif_book';
 line-height: 20.2px;
 text-align: left;
