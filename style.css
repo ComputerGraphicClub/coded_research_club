@@ -609,7 +609,7 @@ padding: 25px 35px; /* coded */
 line-height: 40px;
 }
 
-.title-list-init {
+.text-color-switch {
   color : var(--primary-text-color);
 }
 
