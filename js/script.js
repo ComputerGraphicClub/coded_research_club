@@ -351,7 +351,7 @@ const sectionInfo = document.querySelectorAll('h1.section-info');
 // Position initial du "repère rouge"
 const gradDot = document.querySelector('.graduation-dot');
 // let gradDotYPosition = window.innerHeight/(section.length+1);
-let gradDotYPosition = (window.innerHeight / (frames.length + 3)) * 4;
+let gradDotYPosition = (window.innerHeight / (frames.length + 3)) * 2;
 
 gradDot.style.top = gradDotYPosition + 'px';
 let oldGradDotYPosition = 0;
@@ -364,60 +364,38 @@ const sectionsTitle = document.querySelectorAll('.brand-name');
 mainScrollY[0].tabIndex = 0;
 mainScrollY[0].focus();
 const projectScrollY = document.querySelectorAll('.smartphone-layer-container');
+const titleList = document.querySelectorAll('.title-list');
+titleList[0].style.opacity = "1";
 
 document.addEventListener('scroll', function (ev) {
 
     // MAJ Titre des projects
 
-    for (let i = 0; i < frames.length; i++) {
+    if (isInViewportY(frames[0])) {
+        titleList[1].style.opacity = "1";
+        setTimeout(function(){ 
+            titleList[0].style.opacity = "1"; 
+        },500);
+    }
 
-        if (isInViewportY(frames[0])) {
-            sectionsTitle[0].innerHTML = "Coded <span><span class='letter-spacing-logo-research'>research</span> <span class='letter-spacing-logo-club'><div id='club_align'>club</div></span></span>";
-        }
+    for (let i = 1; i < frames.length-1; i++) {
 
-        if (isInViewportY(frames[1])) {
-            sectionsTitle[0].innerHTML = "Coded <span><span class='letter-spacing-logo-research'>research</span> <span class='letter-spacing-logo-club'><div id='club_align'>club</div></span></span>";
-       }
+        if (isInViewportY(frames[i])) {
 
-       if (isInViewportY(frames[2])) {
-        sectionsTitle[0].innerHTML = "TE.01b";  
-     }
+        titleList[i-1].style.opacity = "0";
+        titleList[i+1].style.opacity = "0";
+        setTimeout(function(){ 
+            titleList[i].style.opacity = "1"; 
+        },500);
+    }
+}
 
-        //  if (isInViewportY(frames[2])) {
-        //     sectionsTitle[0].style.opacity = 0;
-        //     setTimeout(function(){ 
-        //         // Load new content
-        //         sectionsTitle[0].innerHTML = "TE.01b";
-        //         // Fade in
-        //         sectionsTitle[0].style.opacity = 1;
-        //     },600);
-        //  }
-
-         if (isInViewportY(frames[3])) {
-                sectionsTitle[0].innerHTML = "SI.04b";
-         }
-
-         if (isInViewportY(frames[4])) {
-                sectionsTitle[0].innerHTML = "TP.01x";
-         }
-
-         if (isInViewportY(frames[5])) {
-            sectionsTitle[0].innerHTML = "HE.01a";
-         }
-
-         if (isInViewportY(frames[6])) {
-            sectionsTitle[0].innerHTML = "WH.01x";
-         }
-
-         if (isInViewportY(frames[7])) {
-            sectionsTitle[0].innerHTML = "CS.01a";
-         }
-
-         if (isInViewportY(frames[8])) {
-            sectionsTitle[0].innerHTML = "AM.01x";
-         }
-
-        }
+if (isInViewportY(frames[frames.length-1])) {
+    titleList[frames.length-2].style.opacity = "0";
+    setTimeout(function(){ 
+        titleList[frames.length-1].style.opacity = "1"; 
+    },500);
+}
 
     // Vérifier si slide projet est active (visible)
 

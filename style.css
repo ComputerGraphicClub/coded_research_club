@@ -228,6 +228,11 @@ h1.go-to-top {
   z-index: 2;
 }
 
+.title-list {
+  opacity: 0;
+  transition: opacity .4s ease-in-out;
+}
+
 /* .brand-name {
   -webkit-transition: opacity .6s ease-in-out;
   -moz-transition: opacity .6s ease-in-out;
