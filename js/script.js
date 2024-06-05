@@ -366,8 +366,25 @@ mainScrollY[0].focus();
 const projectScrollY = document.querySelectorAll('.smartphone-layer-container');
 const titleList = document.querySelectorAll('.title-list');
 titleList[0].style.opacity = "1";
+const projectClient = document.querySelectorAll('.project-client');
+
+// Project description fade in and out
+
+function isProjectDescInViewportY(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= (-window.innerHeight / 16 || -document.documentElement.clientHeight / 16) &&
+        rect.top <= (window.innerHeight / 16 || document.documentElement.clientHeight / 16)
+    );
+}
 
 document.addEventListener('scroll', function (ev) {
+
+// MAJ Titre des description
+
+    if (isProjectDescInViewportY(frames[2])) {
+        projectClient[0].style.opacity = "1";
+    }
 
     // MAJ Titre des projects
 
@@ -378,7 +395,17 @@ document.addEventListener('scroll', function (ev) {
         },500);
     }
 
-    for (let i = 1; i < frames.length-1; i++) {
+    if (isInViewportY(frames[1])) {
+        projectClient[0].style.opacity = "0";
+        titleList[0].style.opacity = "0";
+        titleList[2].style.opacity = "0";
+        setTimeout(function(){ 
+            titleList[1].style.opacity = "1"; 
+            contrastSwitch.style.opacity = "1";
+        },500);
+    }
+
+    for (let i = 2; i < frames.length-1; i++) {
 
         if (isInViewportY(frames[i])) {
 
