@@ -607,7 +607,14 @@ font-size: 44px; /*coded*/
 font-weight: initial;
 padding: 25px 35px; /* coded */
 line-height: 40px;
-color : var(--primary-text-color);
+}
+
+.title-list-init {
+  color : var(--primary-text-color);
+}
+
+.title-list-project {
+  color : white;
 }
 
 h1.brand-name span {
