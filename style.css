@@ -445,7 +445,7 @@ h1.go-to-top {
   text-align: right;
   z-index: 99;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .4s ease-in-out;
 }
 
 .project-client span {

@@ -386,6 +386,32 @@ document.addEventListener('scroll', function (ev) {
         projectClient[0].style.opacity = "1";
     }
 
+    if (isInViewportY(frames[2])) {
+        projectClient[1].style.opacity = "0";
+        setTimeout(function(){ 
+            projectClient[0].style.opacity = "1";
+        },500);
+    }
+
+    for (let i = 1; i < frames.length-4; i++) {
+        if (isInViewportY(frames[i+2])) {
+        projectClient[i-1].style.opacity = "0";
+        projectClient[i+1].style.opacity = "0";
+
+        setTimeout(function(){ 
+            projectClient[i].style.opacity = "1";
+        },500);
+    }
+}
+
+    if (isInViewportY(frames[8])) {
+        projectClient[5].style.opacity = "0";
+        setTimeout(function(){ 
+            projectClient[6].style.opacity = "1";
+        },500);
+    }
+
+
     // MAJ Titre des projects
 
     if (isInViewportY(frames[0])) {
