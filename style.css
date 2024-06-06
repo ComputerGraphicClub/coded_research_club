@@ -897,13 +897,13 @@ h1.section-name {
 
 .navigation-slides > a {
   display: inline-flex;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.1rem;
+  height: 1.1rem;
   text-decoration: none;
   align-items: center;
   border-radius: 100%;
   justify-content: center;
-  margin: 0 0 0.5rem 0.25rem;
+  margin: 0 0 0.5rem 0.1rem;
   position: relative;
   transition: background-color .0s;
 }
