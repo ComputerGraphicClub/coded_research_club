@@ -195,7 +195,7 @@ function isInViewportX(el) {
     );
 }
 
-const slide = document.querySelectorAll('.new-slides div');
+const slide = document.querySelectorAll('.slide');
 const dot = document.querySelectorAll('.navigation-slides a');
 
 console.log(slide.length);
