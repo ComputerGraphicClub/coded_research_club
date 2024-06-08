@@ -905,7 +905,7 @@ h1.section-name {
   justify-content: center;
   margin: 0 0 0.5rem 0.1rem;
   position: relative;
-  transition: background-color .0s;
+  /* transition: background-color .0s; */
 }
 
 /* .navigation-slides > a:active {
@@ -926,12 +926,12 @@ h1.section-name {
 
 .navigation-slides-dark > a.active {
   background: white;
-  transition: background-color .0s;
+  /* transition: background-color .0s; */
 }
 
 .navigation-slides-light > a.active {
   background: black;
-  transition: background-color .0s;
+  /* transition: background-color .0s; */
 }
 
 .graduation-dot {
