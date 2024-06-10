@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Coded Research Club</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -16,6 +16,14 @@
 <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <script src="js/fitty.min.js"></script>
+
+</script>
+
+<script type="text/javascript">
+  document.addEventListener('touchmove', function (event) {
+    if (event.scale !== 1) { event.preventDefault(); }
+  }, { passive: false });
+</script>
 
 
 </head>

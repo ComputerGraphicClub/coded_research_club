@@ -1,4 +1,8 @@
-
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
 
 /* Coded Research Club - Update 04.24 */
 
