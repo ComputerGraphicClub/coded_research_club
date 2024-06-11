@@ -683,9 +683,13 @@ function OnScrollInfo(div) {
 ////////////// Change image on mobile / portrait /////////////
 //////////////////////////////////////////////////////////////
 
-const mobileLayer = document.querySelectorAll(".info-layer img");
+const mobileInfoLayer = document.querySelectorAll(".info-layer img");
 
-const mobileImgBg = document.querySelectorAll(".info-bg");
+const mobileDesktopLayer = document.querySelectorAll(".desktop-layer img");
+
+const mobileInfoBg = document.querySelectorAll(".info-bg");
+
+const mobileDesktopBg = document.querySelectorAll(".desktop-bg");
 
 
 
@@ -693,9 +697,11 @@ const mobileImgBg = document.querySelectorAll(".info-bg");
 
 if (window.innerHeight > window.innerWidth) {
 
-     mobileImgBg[0].src = "images/graphics/portrait/bg_info_portrait.jpg";
+    mobileInfoBg[0].src = "images/graphics/portrait/bg_info_portrait.jpg";
+    mobileDesktopBg[0].src = "images/desktop/portrait/bg_desktop_portrait.jpg";
 
-    for (let i = 0; i < mobileLayer.length; i++) {
-        mobileLayer[i].src = "images/graphics/portrait/layer_info_portrait_" + i + ".png";
+    for (let i = 0; i < mobileInfoLayer.length; i++) {
+        mobileInfoLayer[i].src = "images/graphics/portrait/layer_info_portrait_" + i + ".png";
+        mobileDesktopLayer[i].src = "images/desktop/portrait/layer_desktop_portrait_" + i + ".png";
     }
 } 
