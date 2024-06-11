@@ -1255,6 +1255,17 @@ font-size: 30px;
 
 @media screen and (max-width: 600px) {
 
+
+     /* juin 2024  */
+
+     .project-client {
+      top: 21px;
+      font-size: 14px;
+      right: 25px;
+      padding: unset;
+      line-height: 14px;
+  }
+
    /* mars 2024  */
 
    .about, .loading-position span {
