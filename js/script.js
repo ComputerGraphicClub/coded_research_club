@@ -677,3 +677,22 @@ function OnScrollInfo(div) {
       
     } else {} 
 }
+
+
+//////////////////////////////////////////////////////////////
+////////////// Change image on mobile / portrait /////////////
+//////////////////////////////////////////////////////////////
+
+const mobileImg = document.getElementsByClassName(smartphone-layer).getElementsByTagName('img');
+
+const mobileImgBg = document.getElementById(slide-1.1).getElementsByTagName('img');
+
+
+if (window.innerHeight > window.innerWidth) {
+
+    mobileImgBg.src = "images/graphics/portrait/bg_info_portrait.jpg";
+
+    for (let i = 0; i < mobileImg.length-1; i++) {
+        mobileImg[i].src = "images/graphics/portrait/layer_info_portrait_" + i + ".png";
+    }
+} 
