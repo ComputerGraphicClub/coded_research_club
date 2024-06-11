@@ -683,9 +683,7 @@ function OnScrollInfo(div) {
 ////////////// Change image on mobile / portrait /////////////
 //////////////////////////////////////////////////////////////
 
-const mobileLayer = document.querySelectorAll(".smartphone-layer");
-
-const mobileLayerImg = mobileLayer.getElementsByTagName('img');
+const mobileLayer = document.querySelectorAll(".smartphone-layer img");
 
 const mobileImgBg = document.getElementById(slide-1.1).getElementsByTagName('img');
 
@@ -695,6 +693,6 @@ if (window.innerHeight > window.innerWidth) {
     mobileImgBg.src = "images/graphics/portrait/bg_info_portrait.jpg";
 
     for (let i = 0; i < mobileImg.length-1; i++) {
-        mobileLayerImg[i].src = "images/graphics/portrait/layer_info_portrait_" + i + ".png";
+        mobileLayer[i].src = "images/graphics/portrait/layer_info_portrait_" + i + ".png";
     }
 } 
