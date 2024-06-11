@@ -404,10 +404,10 @@ document.addEventListener('scroll', function (ev) {
     }
 }
 
-    if (isInViewportY(frames[8])) {
-        projectClient[5].style.opacity = "0";
+    if (isInViewportY(frames[9])) {
+        projectClient[6].style.opacity = "0";
         setTimeout(function(){ 
-            projectClient[6].style.opacity = "1";
+            projectClient[7].style.opacity = "1";
         },500);
     }
 
