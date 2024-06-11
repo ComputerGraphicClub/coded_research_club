@@ -685,7 +685,7 @@ function OnScrollInfo(div) {
 
 const mobileLayer = document.querySelectorAll(".smartphone-layer img");
 
-const mobileImgBg = document.getElementById(slide-1.1).getElementsByTagName('img');
+const mobileImgBg = document.querySelector("#slide-1.1 img");
 
 
 if (window.innerHeight > window.innerWidth) {
