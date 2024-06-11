@@ -692,7 +692,7 @@ if (window.innerHeight > window.innerWidth) {
 
     // mobileImgBg.src = "images/graphics/portrait/bg_info_portrait.jpg";
 
-    for (let i = 0; i < mobileImg.length-1; i++) {
+    for (let i = 0; i < mobileLayer.length-1; i++) {
         mobileLayer[i].src = "images/graphics/portrait/layer_info_portrait_" + i + ".png";
     }
 } 
