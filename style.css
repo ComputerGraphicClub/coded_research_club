@@ -22,7 +22,7 @@
   display: none;
 }
 
-.smartphone-layer, .desktop-layer {
+.smartphone-layer, .desktop-layer, .info-layer {
     width: 100vw;
     height: 100%;
     /* background-position: center;
