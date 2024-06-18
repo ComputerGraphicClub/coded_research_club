@@ -1,3 +1,61 @@
+/* Coded Research Club - Update bouton contact 18.06.24 */
+.contact-button {
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  z-index: 1;
+  bottom: 13.5%;
+  opacity: 0;
+  left: calc(50vw - 50px);
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08); 
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  padding: 2px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: opacity 800ms ease-in-out;
+}
+
+.boussole-red {
+  color: red;
+}
+
+
+.contact-button * {
+  font-size: 12.36px;
+  font-family: 'SansSerif_book';
+  }
+
+@keyframes rotate-animation {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.contact-button-dot {
+  width: 50px;
+  margin: 23px 23px 23px 23px;
+  height: 50px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  animation: 2s pulse 2s ease infinite;
+  box-shadow: 2px 2px 4px rgba(40,40,40, 0.9);
+}
+
+svg {
+  fill: currentColor;
+  height: auto;
+  transform-origin: center;
+  width: 100%;
+  animation: rotate-animation 8s infinite linear;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
