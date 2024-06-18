@@ -456,7 +456,7 @@ const contactButton = document.querySelectorAll('.contact-button');
 
 if (mediaQuery.matches) {
 
-if (isInViewportY(frames[frames.length-1])) {
+if (isInViewportY(frames[frames.length-2])) {
     contactButton[0].style.opacity = "1";
 }
 
