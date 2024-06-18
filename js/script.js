@@ -450,6 +450,26 @@ if (isInViewportY(frames[frames.length-1])) {
     },500);
 }
 
+// add contact button on mobile 
+const mediaQuery = window.matchMedia('(max-width: 600px)')
+const contactButton = document.querySelectorAll('.contact-button');
+
+if (mediaQuery.matches) {
+
+if (isInViewportY(frames[frames.length-1])) {
+    contactButton[0].style.opacity = "1";
+}
+
+else {
+    contactButton[0].style.opacity = "0";
+
+}
+}
+
+else {
+    contactButton[0].style.opacity = "0";
+}
+
     // Vérifier si slide projet est active (visible)
 
 // if (isProjectInViewportY(section[2])) {     
