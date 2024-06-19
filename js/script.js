@@ -382,53 +382,65 @@ document.addEventListener('scroll', function (ev) {
 
 // MAJ Titre des description
 
-    if (isProjectDescInViewportY(frames[2])) {
-        projectClient[0].style.opacity = "1";
-    }
-
-    if (isInViewportY(frames[2])) {
-        projectClient[1].style.opacity = "0";
-        setTimeout(function(){ 
-            projectClient[0].style.opacity = "1";
-        },500);
-    }
-
-    for (let i = 1; i < frames.length-4; i++) {
-        if (isInViewportY(frames[i+2])) {
-        projectClient[i-1].style.opacity = "0";
-        projectClient[i+1].style.opacity = "0";
-
-        setTimeout(function(){ 
-            projectClient[i].style.opacity = "1";
-        },500);
-    }
+if (isProjectDescInViewportY(frames[2])) {
+    projectClient[0].style.opacity = "1";
 }
 
-    if (isInViewportY(frames[9])) {
-        projectClient[6].style.opacity = "0";
-        setTimeout(function(){ 
-            projectClient[7].style.opacity = "1";
-        },500);
-    }
+if (isInViewportY(frames[2])) {
+    projectClient[1].style.opacity = "0";
+    projectClient[1].style.transitionDelay = "0s"; 
+
+    projectClient[0].style.opacity = "1";
+    projectClient[0].style.transitionDelay = "0.5s"; 
+
+}
+
+for (let i = 1; i < frames.length-4; i++) {
+    if (isInViewportY(frames[i+2])) {
+    projectClient[i-1].style.opacity = "0";
+    projectClient[i-1].style.transitionDelay = "0s"; 
+    projectClient[i+1].style.opacity = "0";
+    projectClient[i+1].style.transitionDelay = "0s"; 
+
+    projectClient[i].style.opacity = "1";
+    projectClient[i].style.transitionDelay = "0.5s"; 
+
+}
+}
+
+if (isInViewportY(frames[9])) {
+    projectClient[6].style.opacity = "0";
+    projectClient[6].style.transitionDelay = "0s"; 
+
+
+    projectClient[7].style.opacity = "1";
+    projectClient[7].style.transitionDelay = "0.5s"; 
+}
+
 
 
     // MAJ Titre des projects
 
     if (isInViewportY(frames[0])) {
         titleList[1].style.opacity = "1";
-        setTimeout(function(){ 
-            titleList[0].style.opacity = "1"; 
-        },500);
+        titleList[1].style.transitionDelay = "0s"; 
+
+        titleList[0].style.opacity = "1"; 
+        titleList[0].style.transitionDelay = "0.5s"; 
     }
 
     if (isInViewportY(frames[1])) {
         projectClient[0].style.opacity = "0";
+        projectClient[0].style.transitionDelay = "0s"; 
         titleList[0].style.opacity = "0";
+        titleList[0].style.transitionDelay = "0s"; 
         titleList[2].style.opacity = "0";
-        setTimeout(function(){ 
-            titleList[1].style.opacity = "1"; 
-            contrastSwitch.style.opacity = "1";
-        },500);
+        titleList[2].style.transitionDelay = "0s"; 
+
+        titleList[1].style.opacity = "1"; 
+        titleList[1].style.transitionDelay = "0.5s"; 
+        contrastSwitch.style.opacity = "1";
+        contrastSwitch.style.transitionDelay = "0.5s"; 
     }
 
     for (let i = 2; i < frames.length-1; i++) {
@@ -436,18 +448,31 @@ document.addEventListener('scroll', function (ev) {
         if (isInViewportY(frames[i])) {
 
         titleList[i-1].style.opacity = "0";
+        titleList[i-1].style.transitionDelay = "0s"; 
         titleList[i+1].style.opacity = "0";
-        setTimeout(function(){ 
-            titleList[i].style.opacity = "1"; 
-        },500);
+        titleList[i+1].style.transitionDelay = "0s"; 
+
+        titleList[i].style.opacity = "1"; 
+        titleList[i].style.transitionDelay = "0.5s"; 
+
+        titleList[frames.length-1].style.opacity = "0"; 
+        titleList[0].style.opacity = "0"; 
+        titleList[1].style.opacity = "0"; 
+
     }
 }
 
 if (isInViewportY(frames[frames.length-1])) {
+
+    for (let i = 0; i < frames.length-2; i++) {
+        titleList[i].style.opacity = "0";
+    }
+
     titleList[frames.length-2].style.opacity = "0";
-    setTimeout(function(){ 
-        titleList[frames.length-1].style.opacity = "1"; 
-    },500);
+    titleList[frames.length-2].style.transitionDelay = "0s"; 
+
+    titleList[frames.length-1].style.opacity = "1"; 
+    titleList[frames.length-1].style.transitionDelay = "0.5s"; 
 }
 
 // add contact button on mobile 
